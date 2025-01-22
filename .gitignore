@@ -1,0 +1,4 @@
+/target
+
+# EFI system partition mount
+esp/

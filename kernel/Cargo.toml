@@ -1,0 +1,20 @@
+[package]
+name = "kernel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+volatile = "0.2.6"
+lazy_static = { version = "1.0", features = ["spin_no_std"] }
+spin = "0.5.2"
+uart_16550 = "0.2.0"
+x86_64 = "0.14.2"
+xhci = "0.9.2"
+
+[package.metadata.bootimage]
+run-args = [
+    "-device", "nec-usb-xhci",
+    "-device", "usb-mouse",
+    "-device", "usb-kbd",
+    "-monitor", "stdio",
+]
