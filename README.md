@@ -7,3 +7,7 @@ A USB driver implementation written in Rust.
 ```
 bash run.sh
 ```
+
+## License
+
+This software is licensed under MIT license.
